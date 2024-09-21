@@ -1,2 +1,2 @@
-import { TodoContext,TodoProvider,useToDo } from "./TodoContext";
-export { TodoContext, TodoProvider, useToDo };
+import { TodoContext,TodoProvider,useTodo } from "./TodoContext";
+export { TodoContext, TodoProvider, useTodo };

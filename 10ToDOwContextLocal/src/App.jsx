@@ -9,13 +9,11 @@ function App() {
   const addTodo = (todo) =>{
     setTodos((prev)=>[{id:Date.now(),...todo},...prev])
   }
-  const deleteTodo = (id) =>{
-    setTodos((prev)=>
-    prev.filter(prev.filter((prevTodo)=>prevTodo.id!==id))
-    )
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id))
   }
   const updateTodo = (id,todo)=>{
-    setTodos((prev)=>prev.map((prevTodo)=>prevTodo.id===id?todo : prevTodo))
+    setTodos((prev)=>prev.map((prevTodo)=> prevTodo.id === id ? todo : prevTodo))
   }
   const toggleComplete = (id) => {
     //console.log(id);
