@@ -3,7 +3,7 @@ import { useTodo } from '../contexts'
 
 function TodoItem({ todo }) {
   const [isTodoEditable, setIsTodoEditable] = useState(false)
-  const [todoMsg, setTodoMsg] = useState(todo.todo)
+  const [todoMsg, setTodoMsg] = useState(todo.text)
   const {updateTodo, deleteTodo, toggleComplete} = useTodo()
 
   const editTodo = () => {
@@ -50,6 +50,8 @@ function TodoItem({ todo }) {
           >
               {isTodoEditable ? "📁" : "✏️"}
           </button>
+
+          
           {/* Delete Todo Button */}
           <button
               className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
